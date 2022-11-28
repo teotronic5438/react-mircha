@@ -27,6 +27,7 @@ function NavScrollExample() {
                 <Link className='nav-link' to="/home">Home</Link>
                 <Link className='nav-link' to="/hook">Hook</Link>
                 <Link className='nav-link' to="/asincronia">Asincronia-Hooks</Link>
+                <Link className='nav-link' to="/custom">CustomHooks</Link>
                 <Link className='nav-link' to="/referencias">Referencias</Link>
                 <Link className='nav-link' to="/rutas">Rutas</Link>
             </Nav>
