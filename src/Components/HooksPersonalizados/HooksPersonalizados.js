@@ -6,7 +6,9 @@ import VisorHook from './VisorHook';
 export default function HooksPersonalizados() {
   // console.log(useFetch());
   let url = 'https://pokeapi.co/api/v2/pokemon';
+  // url = "https://jsonplaceholder.typicode.com/users";
   let {data, isPending, error} = useFetch(url);
+  
   // console.log(data);
   return (
     <Container>

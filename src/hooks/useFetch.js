@@ -19,7 +19,6 @@ export const useFetch = (url) => {
                         statusText: !res.statusText ? "Ocurrio un erro" : res.statusText
                     }
                 }
-                // Si no hubo error, seguimos con la ejecucion
                 let data = await res.json();
                 // Luego actualizamos los 3 estados
                 setIsPending(false);
@@ -27,14 +26,12 @@ export const useFetch = (url) => {
                 setError({err: false})
             } catch (err) {
                 setIsPending(true);
-                setError({err})
+                setError(err)
             }
         }
 
         getData(url);
     }, [url]);
-    // useEffect: codigo pokemones, este efecto se ejecutara cuando cambie la url ahi lo defino
-
-    // Un hook personalizado tiene que retornar ciertos valores
+    
     return {data, isPending, error};
 };
