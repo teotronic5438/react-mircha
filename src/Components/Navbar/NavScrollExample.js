@@ -26,7 +26,7 @@ function NavScrollExample() {
             <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                 <Link className='nav-link' to="/home">Home</Link>
                 <Link className='nav-link' to="/hook">Hook</Link>
-                <Link className='nav-link' to="/asincronia">Asincronia-Hooks</Link>
+                <Link className='nav-link' to="/asincronia">Async-Hooks</Link>
                 <Link className='nav-link' to="/custom">CustomHooks</Link>
                 <Link className='nav-link' to="/referencias">Referencias</Link>
                 <Link className='nav-link' to="/rutas">Rutas</Link>
