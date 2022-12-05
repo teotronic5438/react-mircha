@@ -2,7 +2,7 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import CrudTableRow from './CrudTableRow';
 
-const CrudTable = ({data}) => {
+const CrudTable = ({data, setDataToEdit, deleteData}) => {
     // console.log(data);
   return (
     <div className='w-75'>
@@ -21,7 +21,7 @@ const CrudTable = ({data}) => {
                 {
                     data.length === 0 
                     ? <tr><td colSpan="4">Sin datos</td></tr> 
-                    : data.map((el, index) => <CrudTableRow key={index} fila={el}/>)
+                    : data.map((el, index) => <CrudTableRow key={index} fila={el} setDataToEdit={setDataToEdit} deleteData={deleteData}/>)
                 }
             </tbody>
         </Table>

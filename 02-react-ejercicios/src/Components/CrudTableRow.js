@@ -1,16 +1,17 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 
-const CrudTableRow = ({fila}) => {
-    // console.log(key);
+const CrudTableRow = ({fila, setDataToEdit, deleteData}) => {
+    // Destructuramos la fila con los datos
+    let {name, constellation, id} = fila;
   return (
     <tr>
-        <td>{fila.id}</td>
-        <td>{fila.name}</td>
-        <td>{fila.constellation}</td>
+        <td>{id}</td>
+        <td>{name}</td>
+        <td>{constellation}</td>
         <td>
-            <Button variant="warning">Editar</Button>{' '}
-            <Button variant="danger">Eliminar</Button>{' '}
+            <Button variant="warning" onClick={() => setDataToEdit(fila)}>Editar</Button>{' '}
+            <Button variant="danger" onClick={() => deleteData(id)}>Eliminar</Button>{' '}
         </td>
     </tr>
   )

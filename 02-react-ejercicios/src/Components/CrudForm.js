@@ -6,6 +6,15 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
     // Variable de tipo useState
     const [form, setForm] = useState(initialForm)
 
+    useEffect(() => {
+        if(dataToEdit){
+            setForm(dataToEdit);
+        } else {
+            setForm(initialForm)
+        }
+
+    }, [dataToEdit]);
+
     const handleChange = (e) => {
         setForm({
             ...form,
@@ -38,7 +47,7 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
 
     return (
         <div className='w-50'>
-            <h3 className='text-muted'>Agregar</h3>
+            <h3 className='text-muted'>{dataToEdit ? "Editar" : "Agregar"}</h3>
             <Form onSubmit={handleSubmit} className="d-flex">
                 <Form.Group className="m-3">
                     <Form.Label>Nombre</Form.Label>
