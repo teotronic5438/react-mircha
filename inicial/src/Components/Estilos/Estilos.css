@@ -6,3 +6,8 @@
 .bg-react{
     background-color: #61dafb;
 }
+
+.titulo{
+    text-align: center;
+    color: #0d6efd; /* color primary en bootstrap*/
+}

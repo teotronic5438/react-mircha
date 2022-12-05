@@ -1,0 +1,13 @@
+// Creo una variable de Sass
+$color-sass: #bf4080;
+$color-sass: #bf408090; // Los valores 7, 8(el 90) son la opacidad en color Hexa (nueva regla de css)
+
+.bg-sass{
+    background-color: $color-sass;
+    transition: background-color .5s ease-in-out;
+
+    // SASS permite hacer nesting: anidacion de estados
+    &:hover{
+        background-color: $color-sass-80;
+    }
+}
