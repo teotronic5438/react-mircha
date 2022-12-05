@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Home";
 import Hook from '../Pages/Hooks/Hooks';
 import Referencias from '../Pages/Referencias/Referencias';
 import Rutas from '../Pages/Rutas/Rutas';
+import Estilos from "../Components/Estilos/Estilos";
 
 
 const Router = () => {
@@ -25,6 +26,7 @@ const Router = () => {
                     <Route path="/custom" element={ <HooksPersonalizados /> } />
                     <Route path="/referencias" element={ <Referencias /> } />
                     <Route path="/formularios" element={ <Formularios /> } />
+                    <Route path="/estilos" element={ <Estilos /> } />
                     <Route path="/rutas" element={ <Rutas />} />
                 </Routes>
             </BrowserRouter>
