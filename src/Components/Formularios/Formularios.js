@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 export default function Formularios() {
     const [nombre, setNombre] = useState("");
     const [sabor, setSabor] = useState("");
-
+    console.log(sabor);
     return (
         <>
             <Container>
